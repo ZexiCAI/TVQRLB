@@ -21,3 +21,5 @@ Suggests:
   knitr,
   rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/ZexiCAI/TVQRLB
+BugReports: https://github.com/ZexiCAI/TVQRLB/issues
