@@ -1,17 +1,23 @@
 Package: TVQRLB
 Title: Quantile Regression Model with Time-Varying Covariates under Length-Biased Sampling
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
 	person("Zexi", "Cai", email = "zxcai@link.cuhk.edu.hk", role = c("aut", "cre")),
 	person("Tony", "Sit", email = "tonysit@sta.cuhk.edu.hk", role = c("aut", "ctb")))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.5.0)
+Description: This package is an implementation of the estimation and inference procedure of a quantile regression model which is based on an estimating equation, with time-varying covariates under length-biased sampling scheme. It fits a quantile regression model to the provided dataset where the covariates are viewed as time-dependent and the sampling is length-biased. The parameters are obtained by minimizing the Euclidean norm of certain estimating equations. For the standard error estimation, two inference procedures are used: standard multiplier bootstrap, and a more computationally efficient algorithm named "Orthogonal Procrustes" method, based on matrix singular value decomposition, is used.
+Depends: R (>= 3.3.0)
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
 Imports: 
-  survival, magrittr, stats, MASS, pracma, methods
+  magrittr,
+  MASS,
+  methods,
+  pracma,
+  stats,
+  survival
 Suggests: 
-  knitr, rmarkdown
+  knitr,
+  rmarkdown
 VignetteBuilder: knitr

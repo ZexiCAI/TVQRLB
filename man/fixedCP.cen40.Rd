@@ -23,6 +23,6 @@ Randomly generated data
 fixedCP.cen40
 }
 \description{
-A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 40%.
+A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 40\%.
 }
 \keyword{datasets}

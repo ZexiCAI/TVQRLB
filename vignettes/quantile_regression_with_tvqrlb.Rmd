@@ -16,50 +16,46 @@ knitr::opts_chunk$set(
 )
 ```
 
-Vignettes are long form documentation commonly included in packages. Because they are part of the distribution of the package, they need to be as compact as possible. The `html_vignette` output type provides a custom style sheet (and tweaks some options) to ensure that the resulting html is as small as possible. The `html_vignette` format:
-
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+```{r, echo=FALSE}
+library(TVQRLB)
+```
 
 ## Vignette Info
 
-Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+In this vignette, we demonstrate the usage of the `TVQRLB` package, or specifically the `TVQRLB` function
+and the `TVQRLB_OP` function.
 
-## Styles
+## Some Simulation Data
 
-The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+The simulated data are generated according to the following formula
+$$\tau = \int_0^{T^{*}} \exp( (-1) X_0(t) + (0.5) X_1(t) + (1.5) X_2(t) ) \,dt$$
+where the regression level is set to be $0.5$, $\boldsymbol{\beta} = (-1,0.5,1.5)^\top$, and the time dependent covariates are defined as $X_0(t) \equiv 1$, $X_1(t) = (Z_1 + \epsilon_1) \mathbb{I}\{W_1 \leq t < W_2\}$, and $X_2(t) = (Z_2 + \epsilon_2) \mathbb{I}\{t \geq W_2\}$. The instrumental variables are provided by $Z_1$ and $Z_2$ which follow an exponential distribution with unit mean, and the nuisances are obtained from a gamma distribution with shape $4$ and scale $0.4$.
 
-    output: 
-      rmarkdown::html_vignette:
-        css: mystyles.css
+To collect length-biased samples, we generate the truncation variables $A$ from $\mathrm{Unif}(0, a)$ and we keep those samples with $A < T^{*}$, which are then the length-biased failure time $T$. To ensure the length-biasness, $a$ is chosen such that $\mathbb{P}\{T = t \mid T \geq A\} = 0$ for $t > a$, i.e., $a$ is greater than the upper bound of $T$. Censoring times are also obtained from a uniform distribution $\mathrm{Unif}(0, c)$ to yield a desired censoring rate.
 
-## Figures
-
-The figure sizes have been customised so that you can easily put two images side-by-side. 
-
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
-```
-
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+In the data with prefix `fixedCP`, the change points are set fixed as $W_1=0.6$ and $W_2=0.9$.
 
 ```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+knitr::kable(head(round(fixedCP.cen20, 4), 10))
 ```
 
-Also a quote using `>`:
+In the data with prefix `exponCP`, the change points $W_1$ is set to be exponentially distributed with rate $1$, and $W_2$ adds another $\exp(2)$ to $W_1$ so that $W_2$ is always greater than $W_1$.
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(round(exponCP.cen20, 4), 10))
+```
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+## Usage of Functions
+
+We fit the model to the data `fixedCP.cen20`, using the standard multiplier bootstrap method for inference:
+
+```{r}
+TVQRLB(dataset = fixedCP.cen20, betao = c(-1, 0.5, 1.5), bootstrap_time = 100, qtile = 0.5)
+```
+
+Second we fit the model to the same data using the OP method for inference:
+
+```{r}
+TVQRLB_OP(dataset = fixedCP.cen20, betao = c(-1, 0.5, 1.5), bootstrap_time = 1000, qtile = 0.5, B_size = 10000)
+```
+
+The results are displayed as plain text and returned implicitly as a list of lists.

@@ -23,6 +23,6 @@ Randomly generated data
 exponCP.cen20
 }
 \description{
-A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 20%.
+A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 20\%.
 }
 \keyword{datasets}

@@ -18,21 +18,33 @@ TVQRLB_OP(dataset, betao, bootstrap_time, qtile, B_size = 10000)
 \item{B_size}{The resampling size for the OP method. Default is \code{10000}.}
 }
 \value{
-This function returns a list containing two elements: 
+This function returns a list of lists with each list containing three elements:
 \itemize{
+  \item qtile, the quantile level specified to fit the model
   \item beta_est, the estimated value of parameter
   \item sd_OP, the standard error of parameter estimates
 }
 }
 \description{
-Quantile Regression Model with Time-Varying Covariates under Length-Biased Sampling using OP Method for Standard Error Estimation
+Fits a quantile regression model to the provided dataset where the covariates are viewed
+as time-dependent and the sampling is length-biased. The parameters are obtained by
+minimizing the Euclidean norm of certain estimating equations. For the standard error
+estimation, a more computationally efficient algorithm named "Orthogonal Procrustes"
+method, based on matrix singular value decomposition, is used.
 }
 \examples{
+\donttest{
 TVQRLB_OP(fixedCP.cen20, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
 TVQRLB_OP(fixedCP.cen40, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
 TVQRLB_OP(fixedCP.cen60, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
 TVQRLB_OP(exponCP.cen20, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
 TVQRLB_OP(exponCP.cen40, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
 TVQRLB_OP(exponCP.cen60, c(-1, 0.5, 1.5), 1000, 0.5, 10000)
+}
 
+}
+\references{
+Cai, Z. and Sit, T. (2018+),
+"Quantile regression model with time-varying covariates under length-biased sampling,"
+\emph{Working Paper}.
 }

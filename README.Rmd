@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# TVQRLB: Quantile Regression Model with Time-Varying Covariates under Length-Biased Sampling
+
+The __TVQRLB__ package implements the estimation and inference procedure for the quantile regression model 
+which is based on an estimating equation, with time-varying covariates under length-biased 
+sampling scheme.
+
+## Installation
+
+You can install the released version of TVQRLB from [CRAN](https://CRAN.R-project.org) with:
+
+```{r install, eval = FALSE}
+install.packages("TVQRLB")
+library(TVQRLB)
+```
+
+* There will be a GitHub repository for installation soon.
+
+## Example
+
+This is a basic example with some simulation data:
+
+```{r example}
+library(survival)
+library(TVQRLB)
+TVQRLB(fixedCP.cen20, c(-1, 0.5, 1.5), 100, 0.5)
+```
+
+## Reference
+
+Cai, Z. and Sit, T. (2018+), "Quantile regression model with time-varying covariates under length-biased sampling," 
+*Working Paper*.

@@ -1,7 +1,7 @@
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 20%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 20\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -14,7 +14,7 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "fixedCP.cen20"
 
@@ -22,9 +22,9 @@
 
 
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 40%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 40\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -37,7 +37,7 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "fixedCP.cen40"
 
@@ -45,9 +45,9 @@
 
 
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 60%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two fixed change points, and the censoring rate is approximately 60\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -60,7 +60,7 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "fixedCP.cen60"
 
@@ -68,9 +68,9 @@
 
 
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 20%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 20\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -83,7 +83,7 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "exponCP.cen20"
 
@@ -91,9 +91,9 @@
 
 
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 40%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 40\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -106,7 +106,7 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "exponCP.cen40"
 
@@ -114,9 +114,9 @@
 
 
 #' Random Length Biased Right Censoring Data with Time Varying Covariates
-#' 
-#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 60%.
-#' 
+#'
+#' A dataset containing randomly generated survival data. There are two exponentially distributed change points, and the censoring rate is approximately 60\%.
+#'
 #' @format A data frame containing 500 rows and 9 columns
 #' \describe{
 #'   \item{S1}{Numerical values giving the first time varying covariate}
@@ -129,6 +129,6 @@
 #'   \item{Y}{Numerical values giving the observed survival time}
 #'   \item{cens}{Numerical values giving the censoring status. 1 = Failure, 0 = Censored.}
 #' }
-#' 
+#'
 #' @source Randomly generated data
 "exponCP.cen60"

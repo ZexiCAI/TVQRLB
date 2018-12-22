@@ -20,8 +20,13 @@ U_equation(beta, dataset, denom, qtile, weight, norm = TRUE)
 \item{norm}{Whether the norm of the function value should be returned. \code{TRUE}: return the norm; \code{FALSE}: return the function value. Default is \code{TRUE}.}
 }
 \value{
-This function returns the function value (a vector of length $n+1$) of the estimating equation evaluated at "beta" if norm = FALSE; otherwise returns the norm of it.
+This function returns the function value (a vector of length n+1) of the estimating equation evaluated at "beta" if norm = FALSE; otherwise returns the norm of it.
 }
 \description{
-Set up an estimating equation based on Cai and Sit (2018)
+Set up an estimating equation.
+}
+\references{
+Cai, Z. and Sit, T. (2018+),
+"Quantile regression model with time-varying covariates under length-biased sampling,"
+\emph{Working Paper}.
 }
