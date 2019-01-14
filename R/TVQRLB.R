@@ -12,7 +12,7 @@
 #' @docType package
 #' @name TVQRLB-package
 #' @aliases TVQRLB-package
-#' @references Cai, Z. and Sit, T. (2018+),
+#' @references Cai, Z. and Sit, T. (2019+),
 #' "Quantile Regression Model with Time-Varying Covariates under Length-Biased Sampling,"
 #' \emph{Working Paper}.
 "_PACKAGE"

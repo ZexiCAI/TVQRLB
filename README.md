@@ -14,7 +14,12 @@ install.packages("TVQRLB")
 library(TVQRLB)
 ```
 
--   There will be a GitHub repository for installation soon.
+You can install the released version of TVQRLB from GitHub with:
+
+``` r
+devtools::install_github("ZexiCAI/TVQRLB")
+library(TVQRLB)
+```
 
 Example
 -------
@@ -27,11 +32,15 @@ library(TVQRLB)
 TVQRLB(fixedCP.cen20, c(-1, 0.5, 1.5), 100, 0.5)
 #> [1] "FOR QUANTILE LEVEL 0.5"
 #> [1] "The parameter estimate is: -0.8866 0.4668 1.333"
-#> [1] "The mean of bootstrap estimate is: -0.8713 0.4126 1.3792"
-#> [1] "The standard deviation of bootstrap esimate is: 0.0662 0.0879 0.0904"
+#> [1] "The mean of bootstrap estimate is: -0.8816 0.4246 1.3742"
+#> [1] "The standard deviation of bootstrap esimate is: 0.0792 0.0849 0.0937"
+TVQRLB_OP(fixedCP.cen20, c(-1, 0.5, 1.5), 100, 0.5, 10000)
+#> [1] "FOR QUANTILE LEVEL 0.5"
+#> [1] "The parameter estimate is: -0.8866 0.4668 1.333"
+#> [1] "The standard deviation using OP method is: 0.114 0.1197 0.123"
 ```
 
 Reference
 ---------
 
-Cai, Z. and Sit, T. (2018+), "Quantile regression model with time-varying covariates under length-biased sampling," *Working Paper*.
+Cai, Z. and Sit, T. (2019+), "Quantile regression model with time-varying covariates under length-biased sampling," *Working Paper*.

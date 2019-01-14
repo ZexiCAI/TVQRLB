@@ -20,12 +20,17 @@ sampling scheme.
 
 You can install the released version of TVQRLB from [CRAN](https://CRAN.R-project.org) with:
 
-```{r install, eval = FALSE}
+```{r install_cran, eval = FALSE}
 install.packages("TVQRLB")
 library(TVQRLB)
 ```
 
-* There will be a GitHub repository for installation soon.
+You can install the released version of TVQRLB from GitHub with:
+
+```{r install_github, eval = FALSE}
+devtools::install_github("ZexiCAI/TVQRLB")
+library(TVQRLB)
+```
 
 ## Example
 
@@ -35,9 +40,9 @@ This is a basic example with some simulation data:
 library(survival)
 library(TVQRLB)
 TVQRLB(fixedCP.cen20, c(-1, 0.5, 1.5), 100, 0.5)
+TVQRLB_OP(fixedCP.cen20, c(-1, 0.5, 1.5), 100, 0.5, 10000)
 ```
 
 ## Reference
 
-Cai, Z. and Sit, T. (2018+), "Quantile regression model with time-varying covariates under length-biased sampling," 
-*Working Paper*.
+Cai, Z. and Sit, T. (2019+), "Quantile regression model with time-varying covariates under length-biased sampling," *Working Paper*.

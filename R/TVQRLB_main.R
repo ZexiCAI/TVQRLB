@@ -31,7 +31,7 @@
 #'   \item sd_bootstrap, the standard error of bootstrap estimates
 #' }
 #'
-#' @references Cai, Z. and Sit, T. (2018+),
+#' @references Cai, Z. and Sit, T. (2019+),
 #' "Quantile regression model with time-varying covariates under length-biased sampling,"
 #' \emph{Working Paper}.
 #'
@@ -176,7 +176,7 @@ TVQRLB <- function(dataset, betao, bootstrap_time, qtile){
 #'   \item sd_OP, the standard error of parameter estimates
 #' }
 #'
-#' @references Cai, Z. and Sit, T. (2018+),
+#' @references Cai, Z. and Sit, T. (2019+),
 #' "Quantile regression model with time-varying covariates under length-biased sampling,"
 #' \emph{Working Paper}.
 #'
@@ -367,7 +367,7 @@ TVQRLB_OP <- function(dataset, betao, bootstrap_time, qtile, B_size = 10000){
 #'
 #' @return This function returns the function value (a vector of length n+1) of the estimating equation evaluated at "beta" if norm = FALSE; otherwise returns the norm of it.
 #'
-#' @references Cai, Z. and Sit, T. (2018+),
+#' @references Cai, Z. and Sit, T. (2019+),
 #' "Quantile regression model with time-varying covariates under length-biased sampling,"
 #' \emph{Working Paper}.
 #'
