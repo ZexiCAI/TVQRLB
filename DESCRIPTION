@@ -1,10 +1,10 @@
 Package: TVQRLB
 Title: Quantile Regression Model with Time-Varying Covariates under Length-Biased Sampling
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
 	person("Zexi", "Cai", email = "zxcai@link.cuhk.edu.hk", role = c("aut", "cre")),
 	person("Tony", "Sit", email = "tonysit@sta.cuhk.edu.hk", role = c("aut", "ctb")))
-Description: This package is an implementation of the estimation and inference procedure of a quantile regression model which is based on an estimating equation, with time-varying covariates under length-biased sampling scheme. It fits a quantile regression model to the provided dataset where the covariates are viewed as time-dependent and the sampling is length-biased. The parameters are obtained by minimizing the Euclidean norm of certain estimating equations. For the standard error estimation, two inference procedures are used: standard multiplier bootstrap, and a more computationally efficient algorithm named "Orthogonal Procrustes" method, based on matrix singular value decomposition, is used.
+Description: This package is an implementation of the estimation and inference procedure of a censored quantile regression model which is based on an estimating equation, with time-varying covariates under length-biased sampling scheme. It fits a censored quantile regression model to the provided dataset where the covariates are viewed as time-dependent and the sampling is length-biased. The parameters are obtained by minimizing the Euclidean norm of certain estimating equations. For the standard error estimation, two inference procedures: standard multiplier bootstrap, and a more computationally efficient algorithm named "orthogonal Procrustes" method, based on matrix singular value decomposition, are used.
 Depends: R (>= 3.3.0)
 License: GPL (>= 3)
 Encoding: UTF-8
